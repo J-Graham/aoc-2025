@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "new-day": {
+      "factory": "./dist/generators/new-day/new-day",
+      "schema": "./dist/generators/new-day/schema.json",
+      "description": "new-day generator"
+    }
+  }
+}

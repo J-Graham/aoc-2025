@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../input-utils/src/lib/input-utils.ts"],
+  "sourcesContent": ["import { readFile } from 'fs/promises';\nimport { join } from 'path';\n\nexport async function readInput(day: string): Promise<string> {\n  // Assuming data is stored in a 'data' directory at the workspace root\n  const path = join(process.cwd(), 'data', `${day}.txt`);\n  return readFile(path, 'utf-8');\n}\n\nexport function parseLines(input: string): string[] {\n  return input.trim().split('\\n');\n}\n\nexport function parseInts(input: string): number[] {\n  return parseLines(input).map((line) => parseInt(line, 10));\n}\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,eAAAE,EAAA,eAAAC,EAAA,cAAAC,IAAA,eAAAC,EAAAL,GAAA,IAAAM,EAAyB,uBACzBC,EAAqB,gBAErB,eAAsBH,EAAUI,EAA8B,CAE5D,MAAMC,KAAO,QAAK,QAAQ,IAAI,EAAG,OAAQ,GAAGD,CAAG,MAAM,EACrD,SAAO,YAASC,EAAM,OAAO,CAC/B,CAEO,SAASN,EAAWO,EAAyB,CAClD,OAAOA,EAAM,KAAK,EAAE,MAAM;AAAA,CAAI,CAChC,CAEO,SAASR,EAAUQ,EAAyB,CACjD,OAAOP,EAAWO,CAAK,EAAE,IAAKC,GAAS,SAASA,EAAM,EAAE,CAAC,CAC3D",
+  "names": ["input_utils_exports", "__export", "parseInts", "parseLines", "readInput", "__toCommonJS", "import_promises", "import_path", "day", "path", "input", "line"]
+}

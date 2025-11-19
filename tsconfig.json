@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./input-utils"
+    },
+    {
+      "path": "./packages/aoc-tools"
+    },
+    {
+      "path": "./day-01"
+    },
+    {
+      "path": "./day-02"
+    }
+  ]
+}

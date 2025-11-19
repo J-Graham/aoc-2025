@@ -1,0 +1,61 @@
+{
+  "name": "<%= name %>",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "<%= name %>/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/<%= name %>",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "<%= name %>/src/main.ts",
+        "tsConfig": "<%= name %>/tsconfig.app.json",
+        "assets": ["<%= name %>/src/assets"],
+        "generatePackageJson": false,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "<%= name %>:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "<%= name %>:build:development"
+        },
+        "production": {
+          "buildTarget": "<%= name %>:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../coverage/<%= name %>"
+      }
+    }
+  }
+}
+

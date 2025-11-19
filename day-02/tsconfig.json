@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../dist/out-tsc",
+    "types": ["node", "vitest/globals"]
+  },
+  "files": [],
+  "include": [],
+    "references": [
+    {
+      "path": "../input-utils"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}
+

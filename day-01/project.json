@@ -1,0 +1,61 @@
+{
+  "name": "day-01",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "day-01/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/day-01",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "day-01/src/main.ts",
+        "tsConfig": "day-01/tsconfig.app.json",
+        "assets": ["day-01/src/assets"],
+        "generatePackageJson": false,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "day-01:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "day-01:build:development"
+        },
+        "production": {
+          "buildTarget": "day-01:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../coverage/day-01"
+      }
+    }
+  }
+}
+
