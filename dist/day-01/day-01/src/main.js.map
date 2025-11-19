@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../day-01/src/main.ts"],
-  "sourcesContent": ["import { readInput } from '@aoc/input-utils';\r\nimport { solvePart1 } from './lib';\r\n\r\nasync function main() {\r\n  try {\r\n    const input = await readInput('day-01');\r\n    console.log('Part 1:', solvePart1(input));\r\n  } catch (e) {\r\n    console.error(e);\r\n  }\r\n}\r\n\r\nmain();\r\n"],
-  "mappings": "aAAA,IAAAA,EAA0B,4BAC1BC,EAA2B,iBAE3B,eAAeC,GAAO,CACpB,GAAI,CACF,MAAMC,EAAQ,QAAM,aAAU,QAAQ,EACtC,QAAQ,IAAI,aAAW,cAAWA,CAAK,CAAC,CAC1C,OAASC,EAAG,CACV,QAAQ,MAAMA,CAAC,CACjB,CACF,CAEAF,EAAK",
-  "names": ["import_input_utils", "import_lib", "main", "input", "e"]
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../day-01/src/lib.ts"],
-  "sourcesContent": ["export function solvePart1(input: string): number {\r\n  return input.length;\r\n}\r\n\r\n"],
-  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,gBAAAE,IAAA,eAAAC,EAAAH,GAAO,SAASE,EAAWE,EAAuB,CAChD,OAAOA,EAAM,MACf",
-  "names": ["lib_exports", "__export", "solvePart1", "__toCommonJS", "input"]
-}
